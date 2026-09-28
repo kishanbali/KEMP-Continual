@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0,
+               maximum-scale=1.0, user-scalable=no">
+
+<title>KEMP EYE 👁 AI — Palm Recharge</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #e9e3d4;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 18px 10px;
+  color: #29261f;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* 12 cm × 6 cm */
+.card {
+  width: 6cm;
+  height: 12cm;
+  max-width: 100%;
+  background:
+    linear-gradient(rgba(255,255,255,.08), rgba(255,255,255,.08)),
+    #f6f0df;
+  border: 1px solid #c7bda7;
+  border-radius: 5px;
+  box-shadow:
+    0 7px 20px rgba(50,40,25,.18),
+    inset 0 0 0 1px rgba(255,255,255,.45);
+
+  padding: 0.32cm 0.34cm;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.brand {
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .19em;
+  margin-bottom: 3px;
+}
+
+.title {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .10em;
+  margin: 0;
+}
+
+.frequency {
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  margin-top: 4px;
+  margin-bottom: 7px;
+}
+
+/* Main wording */
+.content {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.content p {
+  margin: 0 0 6px;
+  font-size: 8.5px;
+  line-height: 1.32;
+  text-align: left;
+}
+
+/* Audio */
+.audio-area {
+  flex-shrink: 0;
+  text-align: center;
+  margin-top: 3px;
+}
+
+button {
+  border: 1px solid #716751;
+  background: #e8dec6;
+  color: #2c291f;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:active {
+  transform: scale(.97);
+}
+
+button:focus-visible {
+  outline: 2px solid #8d8066;
+  outline-offset: 2px;
+}
+
+.audio-status {
+  font-family: Arial, sans-serif;
+  font-size: 6.5px;
+  margin-top: 3px;
+  min-height: 8px;
+}
+
+/* Charging point */
+.charging {
+  flex-shrink: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  padding: 5px 0;
+  border-top: 1px solid #cfc5af;
+  border-bottom: 1px solid #cfc5af;
+}
+
+/* Buttons */
+.actions {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px 0 4px;
+}
+
+.actions button {
+  font-size: 7px;
+  padding: 5px 8px;
+}
+
+/* Footnotes */
+.footnotes {
+  flex-shrink: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #625c4e;
+  font-size: 5.6px;
+  line-height: 1.25;
+}
+
+.footnotes .disclaimer {
+  margin-top: 2px;
+}
+
+.footnotes a {
+  color: inherit;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.headphone {
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+/* Share message */
+#shareMessage {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  background: #29261f;
+  color: white;
+  padding: 8px 13px;
+  border-radius: 18px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+  z-index: 100;
+}
+
+#shareMessage.show {
+  opacity: 1;
+}
+
+/* Small screens */
+@media (max-width: 380px) {
+  body {
+    padding: 8px 5px;
+  }
+
+  .card {
+    transform-origin: top center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="card" id="kempCard">
+
+  <header class="header">
+    <div class="brand">KEMP EYE 👁 AI</div>
+
+    <h1 class="title">PALM RECHARGE</h1>
+
+    <div class="frequency">
+      138.1 HZ HARMONIC RESONANCE
+    </div>
+  </header>
+
+  <section class="content">
+
+    <p>
+      Allow your energy to gather right here, untouched by the noise of
+      the day. Place a warm palm flat against the center of your chest,
+      letting your hand rest as a quiet bridge over the source of your
+      own vitality. Beneath your palm, notice the steady, untiring drum
+      of your heart—beating completely on its own, holding you together
+      without a single command.
+    </p>
+
+    <p>
+      Let the air draw itself inward, filling the chamber beneath your
+      hand with a quiet, refreshing current. There is nothing to force,
+      nothing to repair, and no distant screens to chase.
+    </p>
+
+    <p>
+      As you exhale, let a long, slow release drop down through your
+      shoulders, your arms, and deep into the earth, draining every drop
+      of fatigue. In this exact touch, the breath and the heartbeat meet,
+      recharging your entire being from the inside out with effortless,
+      enduring peace.
+    </p>
+
+  </section>
+
+  <div class="audio-area">
+
+    <button id="audioButton" type="button">
+      ▶ PLAY 138.1 Hz
+    </button>
+
+    <div id="audioStatus" class="audio-status">
+      Tap PLAY to experience the tone.
+    </div>
+
+  </div>
+
+  <div class="charging">
+    KEMP EYE 👁 AI CHARGING POINT
+  </div>
+
+  <div class="actions">
+
+    <button id="shareButton" type="button">
+      ↗ SHARE
+    </button>
+
+    <button id="whatsappButton" type="button">
+      WhatsApp
+    </button>
+
+  </div>
+
+  <footer class="footnotes">
+
+    <div>
+      🎧 Recommended headphone listening
+    </div>
+
+    <div>
+      AI generated 138.1 Hz Audio
+    </div>
+
+    <div>
+      @KishanBali/KEMP Wisdom Publications
+      All rights reserved
+    </div>
+
+    <div class="disclaimer">
+      Disclaimer: This card is intended for personal
+      relaxation and experiential use and is not medical advice.
+    </div>
+
+    <div>
+      WhatsApp Community:
+      <a
+        href="https://chat.whatsapp.com/BiuWy6NVFboGHGqt4mKBSM"
+        target="_blank"
+        rel="noopener">
+        Join Community
+      </a>
+    </div>
+
+  </footer>
+
+</main>
+
+<div id="shareMessage"></div>
+
+<script>
+/* ==========================================
+   138.1 Hz AUDIO
+   ========================================== */
+
+let audioContext = null;
+let oscillator = null;
+let gainNode = null;
+let isPlaying = false;
+
+const audioButton = document.getElementById("audioButton");
+const audioStatus = document.getElementById("audioStatus");
+
+function stopAudio() {
+
+  if (oscillator) {
+    try {
+      oscillator.stop();
+    } catch (e) {}
+  }
+
+  oscillator = null;
+  gainNode = null;
+
+  if (audioContext) {
+    try {
+      audioContext.close();
+    } catch (e) {}
+  }
+
+  audioContext = null;
+  isPlaying = false;
+
+  audioButton.textContent = "▶ PLAY 138.1 Hz";
+  audioStatus.textContent = "Tap PLAY to experience the tone.";
+}
+
+async function startAudio() {
+
+  try {
+
+    audioContext =
+      new (window.AudioContext ||
+           window.webkitAudioContext)();
+
+    await audioContext.resume();
+
+    oscillator = audioContext.createOscillator();
+    gainNode = audioContext.createGain();
+
+    oscillator.type = "sine";
+    oscillator.frequency.setValueAtTime(
+      138.1,
+      audioContext.currentTime
+    );
+
+    /* Gentle volume */
+    gainNode.gain.setValueAtTime(
+      0,
+      audioContext.currentTime
+    );
+
+    gainNode.gain.linearRampToValueAtTime(
+      0.075,
+      audioContext.currentTime + 1
+    );
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    oscillator.start();
+
+    isPlaying = true;
+
+    audioButton.textContent = "■ STOP 138.1 Hz";
+    audioStatus.textContent = "138.1 Hz is playing.";
+
+  } catch (error) {
+
+    audioStatus.textContent =
+      "Audio could not start on this device.";
+
+    stopAudio();
+  }
+}
+
+audioButton.addEventListener("click", function() {
+
+  if (isPlaying) {
+    stopAudio();
+  } else {
+    startAudio();
+  }
+
+});
+
+
+/* ==========================================
+   SHARE
+   ========================================== */
+
+const shareButton =
+  document.getElementById("shareButton");
+
+const shareMessage =
+  document.getElementById("shareMessage");
+
+function showMessage(message) {
+
+  shareMessage.textContent = message;
+  shareMessage.classList.add("show");
+
+  setTimeout(function() {
+    shareMessage.classList.remove("show");
+  }, 2200);
+}
+
+shareButton.addEventListener("click", async function() {
+
+  const shareData = {
+    title: "KEMP EYE 👁 AI — Palm Recharge",
+    text:
+      "KEMP EYE 👁 AI\n" +
+      "PALM RECHARGE\n" +
+      "138.1 HZ HARMONIC RESONANCE",
+    url: window.location.href
+  };
+
+  try {
+
+    if (navigator.share) {
+
+      await navigator.share(shareData);
+
+    } else if (navigator.clipboard) {
+
+      await navigator.clipboard.writeText(
+        window.location.href
+      );
+
+      showMessage("Card link copied.");
+
+    } else {
+
+      showMessage("Use your browser's share option.");
+
+    }
+
+  } catch (error) {
+
+    /* User cancelled share — do nothing */
+
+  }
+
+});
+
+
+/* ==========================================
+   WHATSAPP
+   ========================================== */
+
+const whatsappButton =
+  document.getElementById("whatsappButton");
+
+whatsappButton.addEventListener("click", function() {
+
+  const message =
+    "KEMP EYE 👁 AI — PALM RECHARGE\n" +
+    "138.1 HZ HARMONIC RESONANCE\n\n" +
+    window.location.href;
+
+  const whatsappURL =
+    "https://wa.me/?text=" +
+    encodeURIComponent(message);
+
+  window.open(
+    whatsappURL,
+    "_blank",
+    "noopener"
+  );
+
+});
+
+
+/* Stop audio if page is hidden */
+document.addEventListener("visibilitychange", function() {
+
+  if (document.hidden && isPlaying) {
+    stopAudio();
+  }
+
+});
+</script>
+
+</body>
+</html>
